@@ -36,6 +36,12 @@ function displayBookOnPage() {
             card.appendChild(para);
         }
 
+
+        // Group buttons for styling
+        btnGroup = document.createElement("div");
+        btnGroup.classList.add("button-group");
+        card.appendChild(btnGroup);
+
         // Create read toggle  button
         const readBookButton = document.createElement("button");
         readBookButton.classList.add("read-book-button");
@@ -43,7 +49,7 @@ function displayBookOnPage() {
 
         // Link data attribute of read button to the array
         readBookButton.dataset.linkedArray = index;
-        card.appendChild(readBookButton);
+        btnGroup.appendChild(readBookButton);
 
         readBookButton.addEventListener("click", toggleRead);  
 
@@ -71,7 +77,7 @@ function displayBookOnPage() {
         // Link data attribute of remove button to the array
         removeBookButton.dataset.linkedArray = index;
         index++;
-        card.appendChild(removeBookButton);
+        btnGroup.appendChild(removeBookButton);
         
         removeBookButton.addEventListener("click", removeBook);  
 
