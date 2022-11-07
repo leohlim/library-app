@@ -10,26 +10,33 @@
 </head>
 <body>
     <div class="container">
-        <div class="header"><h1>My Books</h1></div>
-        
-        <div class="addBookBtn">
-            <button class="addBookButton" onclick="openForm()">Add Book</button> 
+        <div class="header">
+            <h1>My Books</h1>
+            <br>
+            <div class="addBookBtn">
+                <button class="button" onclick="openForm()">Add Book</button> 
+            </div>
         </div>
+        
+        
         <div class="addBookPopup">
             <div class="formPopup" id="popupForm">
                 <form id="formContainer">
                     <h2>Enter Book Info</h2>
+                    <br>
                     <label for="title">Title</label>
-                    <input type="text" name="title" id="Title" placeholder="Book Title" required>
-                    <label for="title">Author</label>
-                    <input type="text" name="author" id="Author" placeholder="Author" required>
-                    <label for="title">Pages</label>
-                    <input type="text" name="pages" id="Pages" placeholder="Pages">
-                    <label for="title">Status</label>
-                    <input type="text" name="read" id="Read" placeholder="Read">
+                    <input type="text" name="title" id="Title" required>
+                    <label for="author">Author</label>
+                    <input type="text" name="author" id="Author" required>
+                    <label for="pages">Pages</label>
+                    <input type="text" name="pages" id="Pages" required>
+                    <select id="Status" name="status">
+                        <option value="Read">Read</option>
+                        <option value="Currently Reading">Currently Reading</option>
+                    </select>
     
-                    <button type="submit" class="submit-book" onclick="intakeFormData()">Add Book</button>
-                    <button type="cancel" class="btn cancel" onclick="closeForm()">Close</button>
+                    <button type="submit" class="button" id ="submit-book" onclick="intakeFormData()">Add Book</button>
+                    <button type="cancel" class="button" id="btn-cancel" onclick="closeForm()">Close</button>
                 </form>
             </div>
         </div>
